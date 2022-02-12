@@ -17,7 +17,7 @@ export class PropertyValidatorBuilder<baseClass, caller extends ClassValidatorBu
 
     private _pushPropertyRules(ruleName: string, ruleFunction: Function): void 
     {
-        // * only create rule when it is already created
+        // * only create rule when it is not already created
         if (!this.propertyRules.find(x => x.functionName === ruleName))
         {
             this.propertyRules.push(
